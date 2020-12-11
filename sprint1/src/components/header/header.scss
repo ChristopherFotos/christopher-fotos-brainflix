@@ -1,0 +1,65 @@
+@import '../../global-styles/global';
+
+.main-header {
+    // background-color: red;
+    padding: 8px;
+
+    @include tablet {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @include desktop {
+        padding: 8px 12%;
+    }
+
+    .logo {
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    .search-input {
+        display: block;
+        width: 90%;
+        border: 2px solid $gray-2;
+        border-radius: 5px;
+
+        display: block;
+        margin: 20px 0;
+        transition: border 0.4s ease-in-out;
+        background-color: $gray-1;
+        padding: 1rem;
+
+        &:focus {
+            border: 2px solid #525252;
+            outline:none;
+            transition: border 0.4s ease-in-out
+        }
+
+        @include tablet {
+            width: 20%;
+            margin-left: auto;
+        }
+    }
+
+    &__upload-wrapper {
+        width: 100%;
+        margin: auto 0;
+        display: flex;
+
+        @include tablet {
+            width: 20%;
+            align-items: center;
+            .cta-btn {
+                padding: 0;
+                height: 50px;
+                margin-left: 16px
+            }
+        }
+    }   
+}

@@ -1,0 +1,27 @@
+@import '../../global-styles/global';
+
+.video-player {
+    background-color: black;
+    @include desktop {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.container {
+    @include desktop {
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.main-player {
+    width: 100%;
+
+    @include desktop {
+        width: 70%;
+    }
+    
+    outline: none;
+}
