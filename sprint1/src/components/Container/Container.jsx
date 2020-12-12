@@ -1,5 +1,6 @@
 import React from 'react'
 import VideoMeta from '../VideoMeta/VideoMeta'
+import NextVideos from '../NextVideos/NextVideos'
 import Comments from '../Comments/Comments'
 
 import './container.scss'
@@ -11,9 +12,9 @@ export default function Container() {
                 <VideoMeta></VideoMeta>
                 <Comments></Comments>
             </section>
-
+            <NextVideos></NextVideos>
             {/* Next videos section goes here */}
-
+            
         </section>
     )
 }

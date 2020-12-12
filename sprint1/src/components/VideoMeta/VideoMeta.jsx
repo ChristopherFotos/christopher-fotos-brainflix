@@ -10,6 +10,7 @@ export default function VideoMeta(props) {
             <h1 className='video-meta__title'>BMX Rampage: 2018 Highlights</h1>
             <MetaInfo></MetaInfo>
             <MetaStats></MetaStats>
+            <span className="divider"></span>
             <div className="video-description">
                 <p className="video-description__text"> 
                 On a gusty day in Southern Utah, a group of 25
@@ -23,7 +24,6 @@ export default function VideoMeta(props) {
                 after his first Red Cow Rampage title
                 </p>
             </div>
-            <span className="divider"></span>
         </section>
     )
 }
