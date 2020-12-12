@@ -1,0 +1,28 @@
+@import '../../global-styles/global';
+
+.video-meta {
+    padding: 0 16px;
+    color: #323232;
+
+    &__title {
+        font-family: $bold;
+        font-size: 28px;
+    }
+}
+
+.divider{
+    display: inline-block;
+    width: 100%;
+    margin-top: 24px;
+    border-bottom: 2px solid $gray-2;
+}
+
+.video-description {
+    padding: 0 16px;
+
+    &__text {
+        color: $black;
+        font-size: 15px;
+        line-height: 1.4rem;
+    }
+}

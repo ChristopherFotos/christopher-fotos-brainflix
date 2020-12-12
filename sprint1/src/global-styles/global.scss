@@ -1,8 +1,8 @@
-@import '../../global-styles/colors';
-@import '../../global-styles/fonts';
-@import '../../global-styles/mixins';
-@import '../../global-styles/font-variables';
-@import '../../global-styles/utility';
+@import './colors';
+@import './fonts';
+@import './mixins';
+@import './font-variables';
+@import './utility';
 
 body, html {
     margin: 0;
@@ -25,5 +25,9 @@ body, html {
     display: inline-block;
     width: 90px;
     clip-path: circle();
+}
+
+.flex {
+    display: flex;
 }
 
