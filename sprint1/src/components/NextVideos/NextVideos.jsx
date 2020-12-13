@@ -1,46 +1,32 @@
 import React, { Component } from 'react'
+import data from '../../data'
 import VideoThumb from './VideoThumb/VideoThumb'
 import './NextVideos.scss'
 
 export default class NextVideos extends Component {
-
-
-        state = {
-            nextVideos: [
-                {
-                    id: 'type of <string>', 
-                    title: 'Become A Travel Pro In One Easy Lesson', 
-                    channel: 'Bernice Lambert', 
-                    image: '/assets/images/thumbnails/video-list-3.jpg' 
-                },
-                {
-                    id: 'type of <string>', 
-                    title: 'Les Houches The Hidden Gem Of The Chamonix', 
-                    channel: 'Bernard Patrick', 
-                    image: '/assets/images/thumbnails/video-list-3.jpg' 
-                },
-                {
-                    id: 'type of <string>', 
-                    title: 'Travel Health Useful Medical Information For', 
-                    channel: 'Glen Harper', 
-                    image: '/assets/images/thumbnails/video-list-2.jpg' 
-                },
-                {
-                    id: 'type of <string>', 
-                    title: 'Cheap Airline Tickets Great Ways To Save', 
-                    channel: 'Emily Harper', 
-                    image: '/assets/images/thumbnails/video-list-1.jpg' 
-                },
-              ]
-        }
+    state = {
+        nextVideos: data.map(v => {
+            return {
+                id: v.id,
+                title: v.title,
+                channel: v.channel,
+                image: v.image
+            }
+        })
+        // .filter(vid => vid.id !== this.props.mainVideoId)
+    }
 
     
 
     render() {
+        console.log(this.state.nextVideos)
+        console.log(this.props.mainVideoId)
         return (
             <aside className = "next-videos">
                 {
-                    this.state.nextVideos.map(v => <VideoThumb video = {v} ></VideoThumb>)
+                    this.state.nextVideos
+                        .filter(v => v.id !== this.props.mainVideoId)
+                        .map(v => <VideoThumb video = {v} handleClick = {this.props.changeVideo}></VideoThumb>)
                 }
             </aside>
         )

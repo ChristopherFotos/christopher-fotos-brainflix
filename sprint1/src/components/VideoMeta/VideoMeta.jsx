@@ -6,8 +6,9 @@ import './VideoMeta.scss'
 export default function VideoMeta(props) {
     return (
         <section className='video-meta'>
-
-            <h1 className='video-meta__title'>BMX Rampage: 2018 Highlights</h1>
+            <h1 className='video-meta__title'>
+                {props.title}
+            </h1>
 
             <MetaInfo></MetaInfo>
             <MetaStats
