@@ -13,8 +13,6 @@ export default function Container() {
                 <Comments></Comments>
             </section>
             <NextVideos></NextVideos>
-            {/* Next videos section goes here */}
-            
         </section>
     )
 }
