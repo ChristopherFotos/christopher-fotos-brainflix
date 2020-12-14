@@ -9,13 +9,13 @@ export default function VideoMeta(props) {
             <h1 className='video-meta__title'>
                 {props.title}
             </h1>
-
+            <div className="video-meta__wrapper">
             <MetaInfo></MetaInfo>
             <MetaStats
                 likes = {props.likes}
                 views = {props.views}
             ></MetaStats>
-
+            </div>
             <span className="divider"></span>
             <div className="video-description">
                 <p className="video-description__text"> 

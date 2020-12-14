@@ -8,6 +8,18 @@
         font-family: $bold;
         font-size: 28px;
     }
+
+    &__wrapper {
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__stats {
+        @include tablet {
+            margin: 0 16px;
+        }
+    }
 }
 
 .divider{

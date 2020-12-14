@@ -9,7 +9,10 @@ const Header =  () => {
             <img src={logo} alt="" className="logo"></img>
             <input type="text" className="search-input" placeholder="Search"></input>
             <div className="main-header__upload-wrapper">
-                <button className="cta-btn">UPLOAD</button>
+                <button className="cta-btn">
+                    <img src="/assets/Icons/Icon-upload.svg" alt="" className="main-header__upload-icon"/>
+                    UPLOAD
+                </button>
                 <img src="./assets/Images/Mohan-muruge.jpg" className='avatar' alt=""></img>
             </div>      
         </header>     

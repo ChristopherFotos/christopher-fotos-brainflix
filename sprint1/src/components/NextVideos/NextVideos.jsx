@@ -13,14 +13,9 @@ export default class NextVideos extends Component {
                 image: v.image
             }
         })
-        // .filter(vid => vid.id !== this.props.mainVideoId)
     }
 
-    
-
     render() {
-        console.log(this.state.nextVideos)
-        console.log(this.props.mainVideoId)
         return (
             <aside className = "next-videos">
                 {
