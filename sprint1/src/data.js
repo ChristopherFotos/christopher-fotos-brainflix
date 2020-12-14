@@ -69,6 +69,74 @@ let data = [
         }
         ] 
       },
+    {
+        id: uuid(),
+        title: 'Take A Romantic Break In A Boutique Hotel',
+        description: 'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title',
+        channel: 'Lydia Perez',
+        image: '/assets/images/thumbnails/video-list-4.jpg',
+        views: '1,001,023',
+        likes: '110,985',
+        duration: '432543',
+        video: 'null',
+        timestamp: 1,
+        comments: [{
+          name: 'Theodore Duncan',
+          comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!',
+        }
+        ] 
+      },
+    {
+        id: uuid(),
+        title: 'Choose The Perfect Accommodations',
+        description: 'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title',
+        channel: 'Lydia Perez',
+        image: '/assets/images/thumbnails/video-list-5.jpg',
+        views: '1,001,023',
+        likes: '110,985',
+        duration: '432543',
+        video: 'null',
+        timestamp: 1,
+        comments: [{
+          name: 'Theodore Duncan',
+          comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!',
+        }
+        ] 
+      },
+    {
+        id: uuid(),
+        title: 'Cruising Destination Ideas',
+        description: 'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title',
+        channel: 'Timothy Austin',
+        image: '/assets/images/thumbnails/video-list-3.jpg',
+        views: '1,001,023',
+        likes: '110,985',
+        duration: '432543',
+        video: 'null',
+        timestamp: 1,
+        comments: [{
+          name: 'Theodore Duncan',
+          comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!',
+        }
+        ] 
+      },
+    {
+        id: uuid(),
+        title: 'Train Travel On Track For Safety',
+        description: 'On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen. While mother nature only allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his first Red Cow Rampage title',
+        channel: 'Scotty Cranmer',
+        image: '/assets/images/thumbnails/video-list-3.jpg',
+        views: '1,001,023',
+        likes: '110,985',
+        duration: '432543',
+        video: 'null',
+        timestamp: 1,
+        comments: [{
+          name: 'Theodore Duncan',
+          comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!',
+        }
+        ] 
+      },
 ]
 
 export default data
