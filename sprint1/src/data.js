@@ -14,7 +14,7 @@ let data = [
         timestamp: 1,
         comments: [{
           name: 'Christopher',
-          comment: 'Wow. Great. Really great.',
+          comment: 'Wow. Great. Really great..',
         }
         ] 
       },
