@@ -1,0 +1,9 @@
+@import '../../global-styles/global';
+
+.container {
+    @include desktop {
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+}

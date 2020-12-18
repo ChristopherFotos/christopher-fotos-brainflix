@@ -1,0 +1,34 @@
+@import './colors';
+@import './fonts';
+@import './mixins';
+@import './font-variables';
+@import './utility';
+
+body, html {
+    margin: 0;
+    font-family: $regular;
+}
+
+.cta-btn {
+    padding: 16px 0;
+    width: 95%;
+    min-width: 110px;
+    border: none;
+    background-color: $blue-1;
+    color: white;
+    border-radius: 4px;
+    font-family: $regular;
+    font-size: 17px;
+    outline: none;
+}
+
+.avatar {
+    display: inline-block;
+    width: 90px;
+    clip-path: circle();
+}
+
+.flex {
+    display: flex;
+}
+

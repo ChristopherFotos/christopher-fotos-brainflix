@@ -1,0 +1,18 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    font-family: $regular;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -140%);
+}
+
+

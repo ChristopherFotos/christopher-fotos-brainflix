@@ -1,0 +1,92 @@
+@import '../../global-styles/global';
+
+.video-player {
+    background-color: black;
+    @include desktop {
+        display: flex;
+        justify-content: center;
+    }
+    position: relative;
+}
+
+
+.controls {
+    width: 95%;
+    height: 50px;
+    // background-color: red;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+
+    & > * {
+        padding: 8px
+    }
+
+    @include desktop {
+        width: 65%
+    }
+
+    &__pause {
+        background-color: rgba($color: $controls, $alpha: $ctrl-alpha);
+        width: 45px;
+        height: 30px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__scrubber {
+        background-color: rgba($color: $controls, $alpha: $ctrl-alpha);
+        color: white;
+        align-items: center;
+        width: 90%;
+        height: 30px;
+        margin-left: 8px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__scrubber-bar{
+        display: inline-block;
+        width: 85%;
+        height: 2px;
+        background-color: black;
+    }
+
+    &__scrubber-icon{
+        position: relative;
+        bottom:7px;
+    }
+
+    &__volume-fullscreen {
+        background-color: rgba($color: $controls, $alpha: $ctrl-alpha);
+        display: inline-block;
+        margin-left: 8px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-around;
+        width: 60px;
+        height: 30px;
+    }
+    
+}
+
+
+.container {
+    @include desktop {
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.main-player {
+    width: 100%;
+
+    @include desktop {
+        width: 70%;
+    }
+    
+    outline: none;
+}
