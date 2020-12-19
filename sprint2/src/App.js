@@ -8,11 +8,13 @@ export default class App extends Component {
   render() {
     return (
       <Switch>
-        <Route path ='/' exact component = {VideoPage} />
+        
         <Switch>
+          <Route path ='/' exact component = {VideoPage} />
+          <Route path = '/upload' component = {Upload} />
           <Route path ='/:id' component = {VideoPage} />
+          
         </Switch>
-        <Route path = '/upload' component = {Upload} />
       </Switch>
     )
   }
