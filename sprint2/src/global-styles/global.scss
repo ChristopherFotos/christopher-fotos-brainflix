@@ -7,6 +7,15 @@
 body, html {
     margin: 0;
     font-family: $regular;
+    overflow-x: hidden
+}
+
+a {
+    text-decoration: none;
+    color: #525252;
+    &:visited {
+        color: inherit;
+    }
 }
 
 .cta-btn {

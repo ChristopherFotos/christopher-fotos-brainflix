@@ -40,7 +40,7 @@ export default class NextVideos extends Component {
                 {
                     this.state.nextVideos
                         .filter(v => v.id !== this.props.mainVideoId)
-                        .map(v => <VideoThumb video = {v} handleClick = {this.props.changeVideo}></VideoThumb>)
+                        .map(v => <VideoThumb key = {v.id} video = {v} handleClick = {this.props.changeVideo}></VideoThumb>)
                 }
             </aside>
         )

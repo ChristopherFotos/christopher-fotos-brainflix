@@ -1,0 +1,77 @@
+import React, { Component } from 'react'
+import axios from 'axios';
+import Testing from '../components/testing';
+import Header from '../components/Header/Header'
+import defaultVideo from '../defaultVideo'
+import VideoPlayer from '../components/VideoPlayer/VideoPlayer'
+import VideoMeta from '../components/VideoMeta/VideoMeta'
+import NextVideos from '../components/NextVideos/NextVideos'
+import Comments from '../components/Comments/Comments'
+import ENV from '../env'
+const { getVideo } = ENV
+
+
+export default class VideoPage extends Component {
+
+    constructor(props){
+        super()
+        this.state = {
+            id: props.match.params.id,
+            mainVideo: defaultVideo
+        };
+    }
+
+    componentDidMount(){
+        console.log(this.props)
+        this.fetchVideo()
+    }
+
+
+
+    componentDidUpdate(prevProps, prevState) {
+        if (this.props.match.params.id !== prevProps.match.params.id) {
+            this.fetchVideo()
+          }
+    }
+
+    fetchVideo() {
+        axios.get(getVideo(this.props.match.params.id))
+              .then(res => {
+                  console.log(res)
+                  this.setState({
+                      mainVideo: res.data
+                  })
+              })
+              .catch(err => console.log(err))
+      }
+
+    render() {
+        return (
+            <>
+                <Header></Header>
+                <VideoPlayer
+                    image = {this.state.mainVideo.image}
+                >
+                </VideoPlayer>
+                <section className = 'container'>
+                <section className="video-meta-container">
+                    <VideoMeta 
+                        title       = {this.state.mainVideo.title}
+                        likes       = {this.state.mainVideo.likes}
+                        views       = {this.state.mainVideo.views}
+                        description = {this.state.mainVideo.description}
+                    ></VideoMeta>
+                    <Comments
+                        comments    = {this.state.mainVideo.comments}
+                    ></Comments>
+                </section>
+                <NextVideos 
+                    mainVideoId = {this.state.mainVideo.id}
+                ></NextVideos>
+                </section>
+            </>
+        )
+    }
+}
+
+
