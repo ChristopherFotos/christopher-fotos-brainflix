@@ -7,3 +7,13 @@
 .video-meta__likes {
     margin-left: 24px;
 }
+
+.video-meta__uploader-name{
+    margin: 0 16px 0 0;
+    align-self: end;
+    line-height: 1em;
+}
+
+.video-meta__date {
+    color: $gray-3
+}

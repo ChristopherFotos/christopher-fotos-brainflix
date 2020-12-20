@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from '../../assets/images/logo/logo.png'
 import './Header.scss'
 
@@ -10,7 +10,6 @@ const Header =  () => {
             <Link to='/' className='flex'>
                 <img src={logo} alt="" className="logo"></img>
             </Link>
-            {/* <img src={logo} alt="" className="logo"></img> */}
             <input type="text" className="search-input" placeholder="Search"></input>
             <div className="main-header__upload-wrapper">
                 <Link to = '/upload' className = 'cta-button' id='upload-link'>

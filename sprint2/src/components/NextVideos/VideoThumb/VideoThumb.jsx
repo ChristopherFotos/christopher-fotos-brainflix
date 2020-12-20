@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import data from '../../../data'
 
 // This component needs to be wrapped in a link to the /videos route with the id from props as a URL parameter.
 // The click handler will have to be removed

@@ -85,6 +85,13 @@
         }
     }
 
+    &__top-label {
+        padding-left: 90px;
+        font-family: $regular;
+        font-size: $size1;
+        color: $gray-3;
+    }
+
     &__meta {
         display: flex;
         justify-content: space-between;

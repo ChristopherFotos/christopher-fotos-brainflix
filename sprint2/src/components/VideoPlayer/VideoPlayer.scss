@@ -1,8 +1,9 @@
 @import '../../global-styles/global';
 
 .video-player {
-    background-color: black;
-    @include desktop {
+    background-color: white;
+    @include tablet {
+        background-color: black;
         display: flex;
         justify-content: center;
     }
@@ -20,6 +21,10 @@
 
     & > * {
         padding: 8px
+    }
+
+    @include tablet {
+        width: 85%
     }
 
     @include desktop {
@@ -84,9 +89,13 @@
 .main-player {
     width: 100%;
 
-    @include desktop {
-        width: 70%;
+    @include tablet {
+        width: 90%;
     }
+
+    @include desktop {
+        width: 76%
+    };
     
     outline: none;
 }

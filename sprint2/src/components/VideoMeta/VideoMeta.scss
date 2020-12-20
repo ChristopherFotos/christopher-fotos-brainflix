@@ -12,6 +12,8 @@
     &__wrapper {
         @include tablet {
             display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
         }
     }
 
@@ -37,4 +39,22 @@
         font-size: 15px;
         line-height: 1.4rem;
     }
+}
+
+.video-meta__stats {
+    margin-top: 36px;
+}
+
+.video-meta__likes {
+    margin-left: 24px;
+}
+
+.video-meta__uploader-name{
+    margin: 0 16px 0 0;
+    align-self: end;
+    line-height: 1em;
+}
+
+.video-meta__date {
+    color: $gray-3
 }

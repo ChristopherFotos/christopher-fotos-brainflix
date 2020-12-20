@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Testing from '../components/testing';
 import Header from '../components/Header/Header'
 import defaultVideo from '../defaultVideo'
 import VideoPlayer from '../components/VideoPlayer/VideoPlayer'
@@ -28,7 +27,7 @@ export default class VideoPage extends Component {
 
 
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps) {
         if (this.props.match.params.id !== prevProps.match.params.id) {
             this.fetchVideo()
           }
@@ -50,7 +49,8 @@ export default class VideoPage extends Component {
             <>
                 <Header></Header>
                 <VideoPlayer
-                    image = {this.state.mainVideo.image}
+                    duration = {this.state.mainVideo.duration}
+                    image    = {this.state.mainVideo.image}
                 >
                 </VideoPlayer>
                 <section className = 'container'>
@@ -59,7 +59,9 @@ export default class VideoPage extends Component {
                         title       = {this.state.mainVideo.title}
                         likes       = {this.state.mainVideo.likes}
                         views       = {this.state.mainVideo.views}
+                        channel     = {this.state.mainVideo.channel}
                         description = {this.state.mainVideo.description}
+                        timestamp   = {this.state.mainVideo.timestamp}
                     ></VideoMeta>
                     <Comments
                         comments    = {this.state.mainVideo.comments}
