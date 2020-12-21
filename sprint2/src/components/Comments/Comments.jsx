@@ -1,4 +1,3 @@
-import CommentsForm from './CommentsForm/CommentsForm'
 import CommentList from './CommentList/CommentList'
 import axios from 'axios'
 import './Comments.scss'
@@ -25,7 +24,6 @@ export default class Comments extends Component {
     }
 
     handleChange = e => {
-        console.log(this.state.inputValue)
         this.setState({
             ...this.state,
             inputValue: e.target.value
@@ -33,7 +31,6 @@ export default class Comments extends Component {
     }
 
     handleSubmit = e => {
-        console.log(postComment(this.props.mainVideoId))
         e.preventDefault()
         axios.post(postComment(this.props.mainVideoId),
             {
@@ -43,7 +40,10 @@ export default class Comments extends Component {
         )
         .then(() => {
             e.target.value = '';
-            this.state.inputValue = '';
+            this.setState({
+                ...this.state,
+                inputValue: ''
+            });
             axios.get(getVideo(this.props.mainVideoId))
                 .then(res => {this.setState(
                     {
@@ -56,7 +56,6 @@ export default class Comments extends Component {
     }
 
     render() {
-        console.log('COMMENTS IS RE-RENDERING', this.props.mainVideoId)
         return (            
             <section className = 'comments'>
 
@@ -78,6 +77,7 @@ export default class Comments extends Component {
                         <button onClick = {this.handleSubmit} className="cta-btn" id="add-comment">COMMENT</button>
                     </form>
                 </div>
+
 
                 <CommentList comments = {this.state.comments}></CommentList>
             </section>

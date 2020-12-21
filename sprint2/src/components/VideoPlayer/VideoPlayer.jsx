@@ -1,9 +1,7 @@
 import React from 'react'
-import posterImg from '../../assets/images/thumbnails/video-list-0.jpg'
 import './VideoPlayer.scss'
 
 export default function VideoPlayer(props) {
-    console.log(props.duration)
     return ( 
         <section className="video-player">
             <video src="" poster={props.image} className="main-player">

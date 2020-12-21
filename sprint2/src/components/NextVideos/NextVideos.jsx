@@ -4,7 +4,7 @@ import ENV  from '../../env'
 import VideoThumb from './VideoThumb/VideoThumb'
 import './NextVideos.scss'
 
-const { videoList, getVideo } = ENV
+const { videoList } = ENV
 
 export default class NextVideos extends Component {
     state = {

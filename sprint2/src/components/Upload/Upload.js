@@ -3,7 +3,6 @@ import Header from '../Header/Header'
 import './Upload.scss'
 
 export default function Upload(props) {
-    console.log(props.match)
     return (
         <>
         <Header />
@@ -13,7 +12,7 @@ export default function Upload(props) {
             <div className = 'upload__inner-container'>
                 <div className = 'upload__top'>
                     <p className ='upload__subhead'>VIDEO THUMBNAIL</p>
-                    <img src='./assets/images/thumbnails/video-list-3.jpg' className = 'upload__thumbnail'/>
+                    <img src='./assets/images/thumbnails/video-list-3.jpg' className = 'upload__thumbnail' alt='video thumbnail'/>
                  </div>
    
                 <form className = 'upload__form'>

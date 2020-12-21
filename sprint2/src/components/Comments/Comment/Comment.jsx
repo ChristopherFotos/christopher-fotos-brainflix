@@ -7,7 +7,7 @@ export default function Comment(props) {
 
     return (
         <div className="comments__content">
-            <img className="comments__avatar" src="./assets/images/Mohan-muruge.jpg"></img>
+            <img className="comments__avatar" src="./assets/images/Mohan-muruge.jpg" alt = 'avatar'></img>
             <div className="comments__inner-container"><div className="comments__text">
                 <div className="comments__meta">
                     <span className="comments__name">{props.comment.name}</span>
@@ -18,7 +18,7 @@ export default function Comment(props) {
                 <p className="comments__p">
                     {props.comment.comment}
                 </p>
-                    </div>
+            </div>
             </div>
         </div>
     )
