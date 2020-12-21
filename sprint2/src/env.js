@@ -24,13 +24,14 @@ export function getReadableDate(timestamp){
         years: '',
         formatString: function(){
             let time = this.seconds;
-            let word = ' seconds'
-            if(this.minutes !== '') {time = this.minutes; word = ' minutes'}
-            if(this.hours   !== '') {time = this.hours; word = ' hours'    }
-            if(this.days    !== '') {time = this.days; word = ' days'      }
-            if(this.months  !== '') {time = this.months; word = ' months'  }
-            if(this.years   !== '') {time = this.years; word = ' years'    }
-            return Math.floor(time) + word + ' ago'
+            let word = ' second'
+            if(this.minutes !== '') {time = this.minutes; word = 'minute'}
+            if(this.hours   !== '') {time = this.hours; word = ' hour'    }
+            if(this.days    !== '') {time = this.days; word = ' day'      }
+            if(this.months  !== '') {time = this.months; word = ' month'  }
+            if(this.years   !== '') {time = this.years; word = ' year'    }
+            if(Math.floor(time) > 1) {word += 's'}
+            return `${Math.floor(time)} ${word} ago`
         } 
     } 
 

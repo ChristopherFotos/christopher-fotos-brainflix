@@ -32,7 +32,7 @@ export default class VideoPage extends Component {
     }
 
     fetchVideo() {
-        axios.get(getVideo(this.props.match.params.id))
+        axios.get(getVideo(this.props.match.params.id || this.state.mainVideo.id))
               .then(res => {
                   console.log(res)
                   this.setState({

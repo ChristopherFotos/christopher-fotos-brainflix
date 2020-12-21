@@ -15,7 +15,7 @@ export default class Comments extends Component {
         inputValue: ''
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps) {
         if(this.props !== prevProps) {
             this.setState({
                 ...this.state,
@@ -42,6 +42,8 @@ export default class Comments extends Component {
             }
         )
         .then(() => {
+            e.target.value = '';
+            this.state.inputValue = '';
             axios.get(getVideo(this.props.mainVideoId))
                 .then(res => {this.setState(
                     {
@@ -54,7 +56,7 @@ export default class Comments extends Component {
     }
 
     render() {
-        console.log('COMMENTS IS RE-RENDERING')
+        console.log('COMMENTS IS RE-RENDERING', this.props.mainVideoId)
         return (            
             <section className = 'comments'>
 
