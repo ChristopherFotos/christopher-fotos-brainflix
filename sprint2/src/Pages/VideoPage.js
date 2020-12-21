@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import Header from '../components/Header/Header'
-import defaultVideo from '../defaultVideo'
+import nullVideo from '../defaultVideo'
 import VideoPlayer from '../components/VideoPlayer/VideoPlayer'
 import VideoMeta from '../components/VideoMeta/VideoMeta'
 import NextVideos from '../components/NextVideos/NextVideos'
@@ -16,7 +16,7 @@ export default class VideoPage extends Component {
         super()
         this.state = {
             id: props.match.params.id,
-            mainVideo: defaultVideo
+            mainVideo: nullVideo
         };
     }
 
