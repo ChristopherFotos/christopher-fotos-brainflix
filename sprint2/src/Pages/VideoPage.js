@@ -15,7 +15,7 @@ export default class VideoPage extends Component {
     constructor(props){
         super()
         this.state = {
-            id: props.match.params.id,
+            id:  props.default || props.match.params.id,
             mainVideo: nullVideo
         };
     }
@@ -25,14 +25,17 @@ export default class VideoPage extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.match.params.id !== prevProps.match.params.id) {
+        if (this.props !== prevProps) {
             this.fetchVideo()
           }
-          
+
+        // if (prevProps)
     }
 
     fetchVideo() {
-        axios.get(getVideo(this.props.match.params.id || this.state.mainVideo.id))
+        let id = this.props.default || this.props.match.params.id || this.state.mainVideo.id
+
+        axios.get(getVideo(id))
               .then(res => {
                   this.setState({
                       mainVideo: res.data

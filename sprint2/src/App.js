@@ -8,7 +8,7 @@ export default class App extends Component {
   render() {
     return (     
         <Switch>
-          <Route path ='/' exact component = {VideoPage} />
+          <Route path ='/' exact render = {routerProps => <VideoPage {...routerProps} default={"1ainjruutd1j"}/> } />
           <Route path = '/upload' component = {Upload} />
           <Route path ='/:id' component = {VideoPage} />
         </Switch>  

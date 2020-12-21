@@ -16,9 +16,9 @@ export default function Upload(props) {
                  </div>
    
                 <form className = 'upload__form'>
-                    <label for = 'name' className ='upload__subhead'>TITLE YOUR VIDEO</label>
+                    <label htmlFor = 'name' className ='upload__subhead'>TITLE YOUR VIDEO</label>
                     <input type = 'text' name = 'name' className='upload__video-name' placeholder ='Add a title to your video'/> 
-                    <label for = 'description' className ='upload__subhead'>TITLE YOUR VIDEO</label>
+                    <label htmlFor = 'description' className ='upload__subhead'>TITLE YOUR VIDEO</label>
                     <textarea name = 'description' className='upload__video-description' placeholder ='Add a description of your video'/> 
                 </form>
             </div>
