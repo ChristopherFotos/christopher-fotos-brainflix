@@ -21,16 +21,14 @@ export default class VideoPage extends Component {
     }
 
     componentDidMount(){
-        console.log(this.props)
         this.fetchVideo()
     }
-
-
 
     componentDidUpdate(prevProps) {
         if (this.props.match.params.id !== prevProps.match.params.id) {
             this.fetchVideo()
           }
+          
     }
 
     fetchVideo() {
@@ -40,6 +38,7 @@ export default class VideoPage extends Component {
                   this.setState({
                       mainVideo: res.data
                   })
+                  console.log('CDM CDM CDM CDM** ',this.state)
               })
               .catch(err => console.log(err))
       }
@@ -65,6 +64,7 @@ export default class VideoPage extends Component {
                     ></VideoMeta>
                     <Comments
                         comments    = {this.state.mainVideo.comments}
+                        mainVideoId = {this.state.mainVideo.id}
                     ></Comments>
                 </section>
                 <NextVideos 
