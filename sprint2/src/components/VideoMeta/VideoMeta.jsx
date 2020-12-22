@@ -5,7 +5,7 @@ export default function VideoMeta(props) {
     let { video } = props
    
     let stringDate = new Date(video.timestamp).toLocaleString().split(',').shift()
-    
+
     return (
         <section className='video-meta'>
             <h1 className='video-meta__title'>
@@ -26,6 +26,7 @@ export default function VideoMeta(props) {
                 <p className="video-description__text"> 
                     {video.description}
                 </p>
+                <h3>{video.comments.length} Comments</h3>
             </div>
         </section>
     )
