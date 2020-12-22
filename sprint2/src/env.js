@@ -26,12 +26,12 @@ export function getReadableDate(timestamp){
         formatString: function(){
             let time = this.seconds;
             let word = ' second'
-            if( this.minutes !== '' ) { time = this.minutes; word = 'minute' }
-            if( this.hours   !== '' ) { time = this.hours;   word = ' hour'  }
-            if( this.days    !== '' ) { time = this.days;    word = ' day'   }
-            if( this.months  !== '' ) { time = this.months;  word = ' month' }
-            if( this.years   !== '' ) { time = this.years;   word = ' year'  }
-            if( Math.floor(time) > 1) { word += 's'}
+            if( this.minutes !== ''  ) { time = this.minutes; word = 'minute' }
+            if( this.hours   !== ''  ) { time = this.hours;   word = ' hour'  }
+            if( this.days    !== ''  ) { time = this.days;    word = ' day'   }
+            if( this.months  !== ''  ) { time = this.months;  word = ' month' }
+            if( this.years   !== ''  ) { time = this.years;   word = ' year'  }
+            if( Math.floor(time) > 1 ) { word += 's'}
             return `${Math.floor(time)} ${word} ago`
         } 
     } 

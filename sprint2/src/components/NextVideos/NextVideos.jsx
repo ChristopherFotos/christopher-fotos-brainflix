@@ -26,7 +26,7 @@ export default class NextVideos extends Component {
                     {
                         nextVideos: [{
                             title: 'Oops...Something went wrong.',
-                            channel: "We're working to get this fixed as soon as we can.",
+                            channel: "We're working to get this fixed as soon as we can. In the meantime, check your internet connection.",
                             image: '/assets/images/404.png'}
                         ]
                     }

@@ -40,7 +40,7 @@ export default class VideoPage extends Component {
                   })
               })
               .catch(err => console.log(err))
-      }
+    }
 
     render() {
         return (
