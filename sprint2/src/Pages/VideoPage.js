@@ -28,8 +28,6 @@ export default class VideoPage extends Component {
         if (this.props !== prevProps) {
             this.fetchVideo()
           }
-
-        // if (prevProps)
     }
 
     fetchVideo() {
