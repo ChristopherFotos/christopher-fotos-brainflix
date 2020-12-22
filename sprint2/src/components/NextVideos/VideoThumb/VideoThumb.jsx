@@ -8,11 +8,11 @@ export default function VideoThumb(props) {
     return (
         <Link to = {`/${props.video.id}`}>
             <div className="next-videos__item" >
-                    <img src={props.video.image} alt="" className="next-videos__thumb"></img>
-                    <div className="next-videos__meta">
-                        <h4 className="next-videos__title">{props.video.title}</h4>
-                        <p className="next-video__user">{props.video.channel}</p>
-                    </div>
+                <img src={props.video.image} alt="" className="next-videos__thumb"></img>
+                <div className="next-videos__meta">
+                    <h4 className="next-videos__title">{props.video.title}</h4>
+                    <p className="next-video__user">{props.video.channel}</p>
+                </div>
             </div>
         </Link>
     )

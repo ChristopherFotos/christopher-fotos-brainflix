@@ -54,12 +54,7 @@ export default class VideoPage extends Component {
                 <section className = 'container'>
                 <section className="video-meta-container">
                     <VideoMeta 
-                        title       = {this.state.mainVideo.title}
-                        likes       = {this.state.mainVideo.likes}
-                        views       = {this.state.mainVideo.views}
-                        channel     = {this.state.mainVideo.channel}
-                        description = {this.state.mainVideo.description}
-                        timestamp   = {this.state.mainVideo.timestamp}
+                        video = {this.state.mainVideo}
                     ></VideoMeta>
                     <Comments
                         comments    = {this.state.mainVideo.comments}

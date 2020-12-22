@@ -15,13 +15,14 @@ export function getReadableDate(timestamp){
     let elapsedTime = (Date.now() - timestamp) / 1000
 
     let time = {
-        input: timestamp,
+          input: timestamp,
         seconds: elapsedTime ,
         minutes: '',
-        hours:   '',
-        days:    '',
-        months:  '',
-        years:   '',
+          hours: '',
+           days: '',
+         months: '',
+          years: '',
+
         formatString: function(){
             let time = this.seconds;
             let word = ' second'
