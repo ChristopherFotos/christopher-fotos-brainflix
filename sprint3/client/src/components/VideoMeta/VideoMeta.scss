@@ -1,0 +1,64 @@
+@import '../../global-styles/global';
+
+.video-meta {
+    padding: 0 16px;
+    color: #323232;
+
+    &__title {
+        font-family: $bold;
+        font-size: 28px;
+    }
+
+    &__wrapper {
+        @include tablet {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+    }
+
+    &__stats {
+        @include tablet {
+            margin: 0 16px;
+        }
+    }
+
+    &__icon {
+        margin-right: 5px;
+    }
+}
+
+.divider{
+    display: inline-block;
+    width: 100%;
+    margin-top: 24px;
+    border-bottom: 2px solid $gray-2;
+}
+
+.video-description {
+    padding: 0;
+
+    &__text {
+        color: $black;
+        font-size: 15px;
+        line-height: 1.4rem;
+    }
+}
+
+.video-meta__stats {
+    margin-top: 36px;
+}
+
+.video-meta__likes {
+    margin-left: 24px;
+}
+
+.video-meta__uploader-name{
+    margin: 0 16px 0 0;
+    align-self: end;
+    line-height: 1em;
+}
+
+.video-meta__date {
+    color: $gray-3
+}
