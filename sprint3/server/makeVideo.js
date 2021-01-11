@@ -11,7 +11,7 @@ function makeVideo (title, description, image) {
         description: description,
         views: 0,
         likes: 0,
-        duration: 120,
+        duration: '1:20',
         video: '',
         timestamp: Date.now(),
         comments: [

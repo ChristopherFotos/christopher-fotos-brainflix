@@ -18,7 +18,7 @@ export default function VideoMeta(props) {
             </div>
             <div className="flex video-meta__stats">
                 <span className="video-meta__views"><img src={"/assets/Icons/icon-views.svg"} alt=""></img>{video.views}</span>
-                <span className="video-meta__likes"><img src={"/assets/Icons/icon-likes.svg"} alt=""></img>{video.likes}</span>
+                <span className="video-meta__likes"><img src={"/assets/Icons/icon-likes.svg"} onClick={props.like} alt=""></img>{video.likes}</span>
             </div>
             </div>
             <span className="divider"></span>

@@ -42,6 +42,23 @@ export default class VideoPage extends Component {
               .catch(err => console.log(err))
     }
 
+    handleLike(){
+        this.setState({
+            ...this.state,
+            mainVideo:{
+                ...this.state.mainVideo,
+                likes: this.state.mainVideo.likes + 1
+            }
+        })
+
+        axios.put(`http://localhost:8080/videos/${this.state.mainVideo.id}`, '')
+            .then(res => {
+                this.setState(res.data)
+        })
+
+
+    }
+
     render() {
         return (
             <>
@@ -55,6 +72,7 @@ export default class VideoPage extends Component {
                 <section className="video-meta-container">
                     <VideoMeta 
                         video = {this.state.mainVideo}
+                        like  = {()=>this.handleLike()}
                     ></VideoMeta>
                     <Comments
                         comments    = {this.state.mainVideo.comments}

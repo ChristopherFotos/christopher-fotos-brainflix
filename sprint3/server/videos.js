@@ -36,5 +36,20 @@ router.post('/', (req, res)=>{
     res.json(video)
 })
 
+/* like a video */
+router.put('/:id', (req, res)=>{
+
+    data.videos.forEach(v => {
+        if(v.id === req.params.id){
+            v.likes += 1
+
+            fs.writeFile('./data/videos.json', JSON.stringify(data), ()=>1)
+            res.json(v)
+        }
+    })
+    
+    res.send('video not found')
+})
+
 /* export router */
 module.exports = router
